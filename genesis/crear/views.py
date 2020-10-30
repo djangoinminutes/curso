@@ -100,12 +100,6 @@ class HomeView(TemplateView):
                 proyecto.save()
         context['proyecto'] = proyecto
         context['tiene_errores'] = ErroresCreacion.objects.filter(proyecto=proyecto).count() > 0
-        # CrearAplicaciones(proyecto,directorio,directorioArchivosTexto)
-        # CrearModelos(proyecto,directorio,directorioArchivosTexto)
-        # CrearForms(proyecto,directorio,directorioArchivosTexto)
-        # CrearVistas(proyecto,directorio,directorioArchivosTexto)
-        # CrearUrls(proyecto,directorio,directorioArchivosTexto)
-        # CrearTemplates()
         return context
 
 class ListaErroresView(ListView):
